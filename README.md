@@ -1,5 +1,5 @@
 Math-Agent Framework | 面向 AI4Math 的多智能体定理推导与验证引擎
-conference:
+
 针对偏微分方程（PDEs）、反应扩散系统等复杂长程数学推导中，大语言模型（LLM）极易产生“逻辑幻觉”和“推导跳跃”的问题，本项目开发了一套具备严格数学验证机制、物理隔离沙盒与高阶系统容错能力的学术级多智能体协同框架。
 
 本系统不依赖纯语义生成的“盲目猜想”，而是通过底层的 SymPy 符号执行引擎进行严密的代数演算约束，确立了以“绝对数学正确性”为状态机流转依据的 AI4Math 新范式。
@@ -74,3 +74,5 @@ Plaintext
 ├── skills/               # 动态加载的原子化技能库 (.md + Frontmatter)
 ├── Conference/           # arXiv 文献下载与解压归档
 └── code.py               # 引擎核心入口（包含所有调度器与工具 Hook）
+
+https://github.com/shareAI-lab/learn-claude-code
