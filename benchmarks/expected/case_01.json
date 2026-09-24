@@ -1,0 +1,12 @@
+{
+  "case_id": "case_01",
+  "branch": "direct_proof",
+  "min_methods": 0,
+  "min_steps": 0,
+  "min_completed_steps": 0,
+  "min_failed_methods_offline": 0,
+  "min_structural_done": 0,
+  "min_detailed_done": 0,
+  "min_proof_revisions_offline": 0,
+  "require_final_artifact": true
+}

@@ -1,0 +1,160 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.6cm}
+\newtheorem{theorem}{Theorem}
+\title{Local bifurcation at the first Dirichlet eigenvalue}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+Let \(\Omega\subset\mathbb R^n\) be bounded and connected with
+\(C^{2,\alpha}\) boundary, \(0<\alpha<1\). Let \(\lambda_1\) be the first
+Dirichlet eigenvalue of \(-\Delta\), and let \(\phi_1>0\) be a corresponding
+eigenfunction. Write
+\[
+ N=\int_\Omega\phi_1^2\,dx>0,\qquad
+ A_4=\int_\Omega\phi_1^4\,dx>0.
+\]
+The formula below allows any normalization of \(\phi_1\).
+
+\begin{theorem}
+For the problem
+\[
+ -\Delta u=\lambda u+u^3\quad\text{in }\Omega,\qquad
+ u|_{\partial\Omega}=0,
+\]
+there are \(\varepsilon>0\) and smooth maps
+\(s\mapsto\lambda(s)\) and \(s\mapsto u(s)\in X\), where
+\[
+ X=\{u\in C^{2,\alpha}(\overline\Omega):u|_{\partial\Omega}=0\},
+\]
+such that \((\lambda(0),u(0))=(\lambda_1,0)\), \(u(s)\ne0\) for
+\(0<|s|<\varepsilon\), and
+\[
+ u(s)=s\phi_1+O(s^3)\quad\text{in }X,\qquad
+ \lambda(s)=\lambda_1-\frac{A_4}{N}s^2+O(s^4).
+\]
+Thus \((\lambda_1,0)\) is a local bifurcation point, and
+\(\lambda(s)<\lambda_1\) for sufficiently small \(s\ne0\).
+Moreover \(\lambda(-s)=\lambda(s)\), \(u(-s)=-u(s)\), and every
+nontrivial solution in a sufficiently small neighborhood of
+\((\lambda_1,0)\) in \(\mathbb R\times X\) belongs to this curve.
+\end{theorem}
+
+\begin{proof}
+Put \(Y=C^{0,\alpha}(\overline\Omega)\) and
+\[
+ F(\lambda,u)=-\Delta u-\lambda u-u^3:
+       \mathbb R\times X\longrightarrow Y.
+\]
+This polynomial map is \(C^\infty\), and \(F(\lambda,0)=0\).
+Schauder theory makes the Dirichlet operator
+\(A=-\Delta:X\to Y\) an isomorphism. The inclusion
+\(J:X\hookrightarrow Y\) is compact; hence
+\(L=D_uF(\lambda_1,0)=A-\lambda_1J\) is Fredholm of index zero.
+The principal Dirichlet eigenvalue theorem on a connected domain gives
+\(\ker L=\operatorname{span}\{\phi_1\}\).
+Integration by parts gives
+\(\int_\Omega\phi_1 Lv\,dx=0\) for every \(v\in X\).
+Because \(\operatorname{Range}L\) has codimension one,
+\[
+ \operatorname{Range}L
+ =\left\{f\in Y:\int_\Omega\phi_1 f\,dx=0\right\}. \tag{1}
+\]
+Also \(D_{\lambda u}^2F(\lambda_1,0)[\phi_1]=-\phi_1\) is outside
+this range, since its pairing with \(\phi_1\) is \(-N\).
+
+Set
+\[
+ W=\left\{v\in X:\int_\Omega\phi_1v\,dx=0\right\},\qquad
+ Qf=f-\frac{\int_\Omega\phi_1f\,dx}{N}\phi_1.
+\]
+Then \(X=\operatorname{span}\{\phi_1\}\oplus W\),
+\(QY=\operatorname{Range}L\), and \(L|_W:W\to QY\) is an
+isomorphism. Write \(u=s\phi_1+w\), where \(w\in W\).
+The Banach-space implicit function theorem applied to
+\[
+ G(s,\lambda,w)=QF(\lambda,s\phi_1+w)=0
+\]
+at \((0,\lambda_1,0)\) gives a unique smooth
+\(w=w(s,\lambda)\in W\) near that point.
+
+Since \(G(0,\lambda,0)=0\), uniqueness gives
+\(w(0,\lambda)=0\) for every nearby \(\lambda\). Moreover,
+\[
+ G_s(0,\lambda,0)
+ =Q[(\lambda_1-\lambda)\phi_1]=0.
+\]
+The operator \(G_w(0,\lambda,0)\) remains invertible for nearby
+\(\lambda\), so implicit differentiation gives
+\(w_s(0,\lambda)=0\). The oddness
+\(F(\lambda,-u)=-F(\lambda,u)\) and uniqueness give
+\(w(-s,\lambda)=-w(s,\lambda)\). Thus \(w\) is odd in \(s\),
+and its zeroth, first and second derivatives at zero vanish.
+Uniform Taylor expansion yields
+\[
+ \|w(s,\lambda)\|_X\le C|s|^3                       \tag{2}
+\]
+for \(\lambda\) in a sufficiently small interval about \(\lambda_1\).
+
+Define the unnormalized scalar equation
+\[
+ g(s,\lambda)
+ =\int_\Omega\phi_1F(\lambda,s\phi_1+w(s,\lambda))\,dx.
+\]
+By (1), \(w\in W\), and integration by parts,
+\(\int_\Omega\phi_1(-\Delta-\lambda)w\,dx=0\).
+Expanding the cubic term and using (2) gives, uniformly near
+\(\lambda_1\),
+\[
+ g(s,\lambda)
+ =(\lambda_1-\lambda)Ns-A_4s^3+O(s^5).          \tag{3}
+\]
+In particular the cross term \(s^2w\) is \(O(s^5)\).
+
+The smooth function \(g\) is odd in \(s\). Define
+\[
+ H(s,\lambda)=\int_0^1\partial_sg(ts,\lambda)\,dt.
+\]
+Then \(g(s,\lambda)=sH(s,\lambda)\), and \(H\) is smooth and even
+in \(s\). Equation (3) gives
+\[
+ H(s,\lambda)=(\lambda_1-\lambda)N-A_4s^2+O(s^4),
+ \qquad
+ \partial_\lambda H(0,\lambda_1)=-N\ne0.
+\]
+The scalar implicit function theorem therefore gives a unique smooth
+\(\lambda=\lambda(s)\) near zero such that
+\(H(s,\lambda(s))=0\) and \(\lambda(0)=\lambda_1\).
+Evenness of \(H\) and uniqueness give
+\(\lambda(-s)=\lambda(s)\). Substitution yields
+\[
+ \lambda(s)=\lambda_1-\frac{A_4}{N}s^2+O(s^4).
+\]
+Since \(A_4/N>0\), the branch lies in \(\lambda<\lambda_1\)
+for small \(s\ne0\). Set
+\(u(s)=s\phi_1+w(s,\lambda(s))\).
+By (2), \(u(s)=s\phi_1+O(s^3)\), so \(u(s)\ne0\) when
+\(s\ne0\) is sufficiently small.
+Oddness of \(w\) gives \(u(-s)=-u(s)\).
+
+Finally, any nearby solution decomposes uniquely as
+\(u=s\phi_1+w\), \(w\in W\). The auxiliary equation forces
+\(w=w(s,\lambda)\). If \(s=0\), then \(w=w(0,\lambda)=0\).
+For \(s\ne0\), the remaining scalar equation \(g(s,\lambda)=0\)
+is equivalent to \(H(s,\lambda)=0\), whose local uniqueness
+forces \(\lambda=\lambda(s)\). Hence every nearby nontrivial
+solution lies on the stated curve.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{CR71}
+M.~G. Crandall and P.~H. Rabinowitz,
+\emph{Bifurcation from simple eigenvalues},
+Journal of Functional Analysis \textbf{8} (1971), 321--340.
+\href{https://doi.org/10.1016/0022-1236(71)90015-2}{doi:10.1016/0022-1236(71)90015-2}.
+\end{thebibliography}
+\end{document}

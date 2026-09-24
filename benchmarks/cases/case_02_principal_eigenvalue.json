@@ -1,0 +1,46 @@
+{
+  "id": "case_02",
+  "title": "Principal eigenvalue of a Neumann elliptic operator",
+  "domain": "spectral theory",
+  "difficulty": "medium",
+  "problem": "Let Ω be a bounded connected C² domain, d>0 and q∈C(Ω̄). For L=dΔ+q with homogeneous Neumann boundary condition, characterize the largest eigenvalue by the Rayleigh quotient, show it has a strictly positive eigenfunction and is simple, and show monotonicity under a pointwise increase in q.",
+  "offline_scenario": {
+    "literature_notes": "Fixture: compact self-adjoint elliptic spectral theory and the strong maximum principle.",
+    "methods": [
+      {
+        "name": "Variational and positivity argument",
+        "rationale": "Use the Rayleigh supremum, elliptic regularity and positivity.",
+        "outcome": "complete",
+        "steps": [
+          {
+            "id": "E1",
+            "goal": "Set up the Neumann realization and Rayleigh quotient",
+            "depends_on": []
+          },
+          {
+            "id": "E2",
+            "goal": "Obtain the largest eigenvalue and eigenfunction",
+            "depends_on": [
+              "E1"
+            ]
+          },
+          {
+            "id": "E3",
+            "goal": "Establish positivity and simplicity",
+            "depends_on": [
+              "E2"
+            ]
+          },
+          {
+            "id": "E4",
+            "goal": "Prove monotonicity under q₁≤q₂",
+            "depends_on": [
+              "E1",
+              "E3"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

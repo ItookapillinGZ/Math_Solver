@@ -1,0 +1,11 @@
+{
+  "id": "case_01",
+  "title": "Elliptic maximum principle",
+  "domain": "elliptic PDE",
+  "difficulty": "easy",
+  "problem": "Let Ω be a bounded C² domain, c∈C(Ω̄) satisfy c(x)≥c₀>0, and u∈C²(Ω)∩C(Ω̄). If -Δu+c(x)u≥0 in Ω and u≥0 on ∂Ω, prove u≥0 in Ω̄.",
+  "offline_scenario": {
+    "literature_notes": "Fixture: standard weak maximum principle for a strictly positive zeroth-order coefficient; no external literature is fetched.",
+    "methods": []
+  }
+}

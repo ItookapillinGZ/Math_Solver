@@ -1,0 +1,12 @@
+{
+  "case_id": "case_03",
+  "branch": "methods",
+  "min_methods": 2,
+  "min_steps": 6,
+  "min_completed_steps": 4,
+  "min_failed_methods_offline": 1,
+  "min_structural_done": 1,
+  "min_detailed_done": 1,
+  "min_proof_revisions_offline": 0,
+  "require_final_artifact": true
+}

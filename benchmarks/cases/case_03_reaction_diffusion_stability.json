@@ -1,0 +1,64 @@
+{
+  "id": "case_03",
+  "title": "Reaction–diffusion linear stability",
+  "domain": "reaction-diffusion systems",
+  "difficulty": "medium",
+  "problem": "On a bounded connected smooth Ω with homogeneous Neumann boundary conditions consider u_t=d₁Δu+a u-b v, v_t=d₂Δv+c u-e v, where d₁,d₂,b,c,e>0 and a∈ℝ. Expand in Neumann Laplacian modes μₖ≥0 and derive a necessary and sufficient criterion for exponential linear stability in L² in terms of the trace and determinant of each 2×2 mode matrix. Address the high-mode tail.",
+  "offline_scenario": {
+    "literature_notes": "Fixture: Neumann spectral decomposition and the 2×2 Routh–Hurwitz criterion.",
+    "methods": [
+      {
+        "name": "Mode-by-mode spectral criterion",
+        "rationale": "Diagonalize spatial modes and check each 2×2 matrix.",
+        "outcome": "complete",
+        "steps": [
+          {
+            "id": "R1",
+            "goal": "Expand perturbations in Neumann eigenfunctions",
+            "depends_on": []
+          },
+          {
+            "id": "R2",
+            "goal": "Derive the mode matrix and characteristic polynomial",
+            "depends_on": [
+              "R1"
+            ]
+          },
+          {
+            "id": "R3",
+            "goal": "State trace/determinant stability conditions",
+            "depends_on": [
+              "R2"
+            ]
+          },
+          {
+            "id": "R4",
+            "goal": "Control the high-mode tail uniformly",
+            "depends_on": [
+              "R3"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Direct energy estimate",
+        "rationale": "Try a coercive quadratic energy; this fixture injects a failed step.",
+        "outcome": "fail_first_task",
+        "steps": [
+          {
+            "id": "F1",
+            "goal": "Construct a candidate quadratic energy",
+            "depends_on": []
+          },
+          {
+            "id": "F2",
+            "goal": "Close the derivative estimate",
+            "depends_on": [
+              "F1"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

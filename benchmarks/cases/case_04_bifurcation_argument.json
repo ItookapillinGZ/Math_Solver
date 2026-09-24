@@ -1,0 +1,60 @@
+{
+  "id": "case_04",
+  "title": "Local bifurcation at a simple Dirichlet eigenvalue",
+  "domain": "bifurcation",
+  "difficulty": "hard",
+  "problem": "For F(λ,u)=-u''-λu-u² on (0,π) with Dirichlet boundary conditions, X=H²(0,π)∩H¹₀(0,π), Y=L²(0,π), analyze local bifurcation from (λ,u)=(1,0). Verify the simple kernel and Fredholm range of D_uF(1,0), check transversality D_{λu}F(1,0)[sin x]=-sin x, and state the local nontrivial branch conclusion under the simple-eigenvalue bifurcation theorem.",
+  "offline_scenario": {
+    "literature_notes": "Fixture: simple-eigenvalue local bifurcation theorem and Dirichlet spectral facts.",
+    "methods": [
+      {
+        "name": "Simple-eigenvalue bifurcation theorem",
+        "rationale": "Verify hypotheses at the first Dirichlet eigenvalue.",
+        "outcome": "revise_proof",
+        "steps": [
+          {
+            "id": "B1",
+            "goal": "Define the Banach spaces and smooth nonlinear map",
+            "depends_on": []
+          },
+          {
+            "id": "B2",
+            "goal": "Compute the linearization at (1,0)",
+            "depends_on": [
+              "B1"
+            ]
+          },
+          {
+            "id": "B3",
+            "goal": "Show the kernel is span{sin x}",
+            "depends_on": [
+              "B2"
+            ]
+          },
+          {
+            "id": "B4",
+            "goal": "Identify the codimension-one range",
+            "depends_on": [
+              "B2"
+            ]
+          },
+          {
+            "id": "B5",
+            "goal": "Check the transversality condition",
+            "depends_on": [
+              "B3",
+              "B4"
+            ]
+          },
+          {
+            "id": "B6",
+            "goal": "Apply the stated local bifurcation theorem",
+            "depends_on": [
+              "B5"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

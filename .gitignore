@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment secrets
+.env
+
+# IDE
+.idea/
+
+# Agent runtime state
+.tasks/
+.worktrees/
+.mailboxes/
+.transcripts/
+.task_outputs/
+.scheduled_tasks.json
+.state/
+.audit/
+
+# Generated benchmark traces and artifacts
+benchmarks/results/
